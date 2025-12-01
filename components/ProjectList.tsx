@@ -28,7 +28,8 @@ async function ProjectList({ category }: { category: string }) {
         ease: "easeInOut",
       }}
     >
-      {projects.map((project) => (
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      {projects.map((project: any) => (
         <motion.div key={project.id}>
           <SingleProject project={project} />
         </motion.div>
