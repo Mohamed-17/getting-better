@@ -1,0 +1,36 @@
+"use client";
+import React, { createContext, useEffect, useState } from "react";
+
+const ToggleContext = createContext<{
+  toggleMood: boolean;
+  setterMood: () => void;
+} | null>(null);
+
+const ToggleMood = ({ children }: { children: React.ReactNode }) => {
+  const [toggleMood, setToggleMood] = useState<boolean>(false);
+
+  const setterMood = () => {
+    setToggleMood(!toggleMood);
+  };
+  return (
+    <ToggleContext.Provider
+      value={{
+        toggleMood,
+        setterMood,
+      }}
+    >
+      <main className={`${Boolean(toggleMood) ? "bg-sky-950" : "bg-white"} `}>
+        {children}
+      </main>
+    </ToggleContext.Provider>
+  );
+};
+const useToggleMood = () => {
+  const context = React.useContext(ToggleContext);
+  if (!context) {
+    throw new Error("useToggleMood must be used within a ToggleMood");
+  }
+  return context;
+};
+export { useToggleMood };
+export default ToggleMood;
