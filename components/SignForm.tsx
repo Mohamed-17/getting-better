@@ -8,8 +8,8 @@ async function SignForm() {
   const user = await auth();
 
   return (
-    <fieldset className="grid place-content-center mt-10">
-      <FieldGroup className="border rounded-md p-5 gap-2 w-[400px] shadow-xl">
+    <fieldset className="grid place-content-center mt-10 ">
+      <FieldGroup className="border rounded-md p-5 gap-2 w-[400px] shadow-xl bg-[#1792b8] text-white">
         <FieldLegend className="font-semibold">Connect with Google</FieldLegend>
         <FieldContent className="text-sm">
           This Feature Make You Login & Logout With Google Account

@@ -1,13 +1,13 @@
 import { ArrowUpRightIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { signIn } from "@/auth";
 import Image from "next/image";
+import { signIn } from "@/auth";
 
 export async function SignInButton() {
   return (
     <form
-      className="flex flex-col items-start gap-8 sm:flex-row"
+      className="flex flex-col items-start gap-8 sm:flex-row text-black"
       action={async () => {
         "use server";
         await signIn("google", { callbackUrl: "/" });
@@ -16,7 +16,7 @@ export async function SignInButton() {
       <div className="flex items-start gap-2">
         <Button
           size="sm"
-          variant="default"
+          variant="outline"
           type="submit"
           className="cursor-pointer"
         >
@@ -25,7 +25,7 @@ export async function SignInButton() {
         <Button
           size="icon-sm"
           aria-label="Submit"
-          variant="default"
+          variant="outline"
           className="cursor-pointer"
         >
           <Image
