@@ -7,6 +7,7 @@ type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 async function HomePage({ searchParams }: Props) {
+  "use memo";
   return (
     <main className="py-20">
       <Hero />
