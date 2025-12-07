@@ -22,8 +22,8 @@ export async function UserForm() {
             <Image
               src={user.user.image}
               alt="Google_logo"
-              width={200}
-              height={200}
+              width={300}
+              height={300}
               className="object-contain w-4 rounded-full"
             />
           </Button>

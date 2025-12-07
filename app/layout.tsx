@@ -20,6 +20,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <title>Mo Is Getting Better</title>
+        <meta
+          name="description"
+          content="My Name is Mohamed Elmshlay i'm a Frontend Developer that love to create beautiful and functional websites"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+      </head>
       <body
         className={`${josefinSans.className} text-black antialiased scroll-smooth`}
       >
