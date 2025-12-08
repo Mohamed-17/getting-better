@@ -23,7 +23,7 @@ function SelectCategory() {
     router.push(url.toString());
   }, [category, router]);
   return (
-    <Select value={category} onValueChange={setCategory}>
+    <Select value={category} onValueChange={setCategory} defaultValue={"all"}>
       <SelectTrigger className="w-[180px] bg-[#314158] text-white">
         <SelectValue placeholder="Select a category" />
       </SelectTrigger>
