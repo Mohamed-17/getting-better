@@ -2,7 +2,6 @@ import React from "react";
 import SingleProject from "./SingleProject";
 import * as motion from "motion/react-client";
 import { Project } from "@prisma/client";
-
 const parentVariants = {
   hidden: {
     opacity: 0,

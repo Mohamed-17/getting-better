@@ -1,7 +1,8 @@
 "use server";
 import { prisma } from "@/lib/prisma";
+import { cache } from "react";
 
-export const getProjects = async (category: string) => {
+export const getProjects = cache(async (category: string) => {
   const TAKE_PER_SECTION = 5;
   const projects = await prisma.project.findMany({
     where: {
@@ -14,4 +15,4 @@ export const getProjects = async (category: string) => {
   });
 
   return projects;
-};
+});
