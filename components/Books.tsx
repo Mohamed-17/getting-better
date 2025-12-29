@@ -8,7 +8,7 @@ async function Books() {
   const session = await auth();
   return (
     <SessionProvider session={session}>
-      <div className="mt-20">
+      <section className="mt-20" id="books">
         <h1 className="text-2xl font-semibold leading-10 space-x-2">
           <span> Using in This section :</span>
           <span className="text-blue-500">
@@ -19,7 +19,7 @@ async function Books() {
         <Suspense fallback={<SkeletonCard />}>
           <RecentBooks />
         </Suspense>
-      </div>
+      </section>
     </SessionProvider>
   );
 }

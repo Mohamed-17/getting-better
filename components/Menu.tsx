@@ -101,19 +101,47 @@ function Menu() {
                 >
                   Sections
                 </h4>
-                <li
-                  className={` px-5 py-2  cursor-pointer bg-blue-500 text-white`}
-                >
-                  <a
-                    href="#authentication"
-                    className="w-full flex justify-between items-center text-[15px]"
+                <ul className="flex flex-col gap-3 pb-5">
+                  <li
+                    className={` px-5 py-2  cursor-pointer bg-blue-500 text-white`}
                   >
-                    <span>Authentication</span>
-                    <span>
-                      <ArrowLeft size={15} />
-                    </span>
-                  </a>
-                </li>
+                    <a
+                      href="#projects"
+                      className="w-full flex justify-between items-center text-[15px]"
+                    >
+                      <span>Projects</span>
+                      <span>
+                        <ArrowLeft size={15} />
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    className={` px-5 py-2  cursor-pointer bg-blue-500 text-white`}
+                  >
+                    <a
+                      href="#authentication"
+                      className="w-full flex justify-between items-center text-[15px]"
+                    >
+                      <span>Authentication</span>
+                      <span>
+                        <ArrowLeft size={15} />
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    className={` px-5 py-2   cursor-pointer bg-blue-500 text-white `}
+                  >
+                    <a
+                      href="#books"
+                      className="w-full flex justify-between items-center text-[15px]"
+                    >
+                      <span>Books</span>
+                      <span>
+                        <ArrowLeft size={15} />
+                      </span>
+                    </a>
+                  </li>
+                </ul>
               </ul>
             </motion.div>
           )}

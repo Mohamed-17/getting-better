@@ -20,7 +20,7 @@ function SelectCategory() {
   useEffect(() => {
     const url = new URL(window.location.href);
     url.searchParams.set("category", category || "all");
-    router.push(url.toString());
+    router.push(url.toString(), { scroll: false });
   }, [category, router]);
   return (
     <Select value={category} onValueChange={setCategory} defaultValue={"all"}>

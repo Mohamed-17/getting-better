@@ -43,7 +43,7 @@ function Modal({
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.2 }}
         transition={{ duration: 0.3 }}
-        className={`fixed rounded-lg top-1/2 left-1/2 transform text-black -translate-x-1/2 -translate-y-1/2 bg-white z-10 w-250 h-200 ${
+        className={`fixed rounded-lg top-1/2 left-1/2 transform text-white -translate-x-1/2 -translate-y-1/2 bg-[#314158] z-10 w-250 h-200 ${
           isOpen ? "block" : "hidden"
         }`}
       >
@@ -53,7 +53,7 @@ function Modal({
             <Input type="text" placeholder="Author" name="author" />
             <Input type="file" placeholder="Image" name="image" />
             <Select name="status">
-              <SelectTrigger className="w-[180px] bg-[#314158] text-black">
+              <SelectTrigger className="w-[180px] bg-[#314158] text-white">
                 <SelectValue placeholder="Select Status" />
               </SelectTrigger>
               <SelectContent>

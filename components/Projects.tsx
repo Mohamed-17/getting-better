@@ -12,8 +12,7 @@ async function Projects({
   const projects = await getProjects(category as string);
 
   return (
-    <section className=" min-h-[770px]">
-      
+    <section className=" min-h-[770px]" id="projects">
       <ProjectList projects={projects} />
     </section>
   );
